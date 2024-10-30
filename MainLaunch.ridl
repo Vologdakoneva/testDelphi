@@ -1,0 +1,7 @@
+[
+  uuid(50D0CE2A-FE74-4FEC-8153-E493E1CA15C1),
+  version(1.0)
+]
+library MainLaunch
+{
+};

@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C645850D-BC74-4BDB-9F41-0FFD04C56E81}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MainLaunch.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FindFilesCom.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExcecCom.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MainLaunch">
+        <MSBuild Projects="MainLaunch.dproj"/>
+    </Target>
+    <Target Name="MainLaunch:Clean">
+        <MSBuild Projects="MainLaunch.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MainLaunch:Make">
+        <MSBuild Projects="MainLaunch.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FindFilesCom">
+        <MSBuild Projects="FindFilesCom.dproj"/>
+    </Target>
+    <Target Name="FindFilesCom:Clean">
+        <MSBuild Projects="FindFilesCom.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FindFilesCom:Make">
+        <MSBuild Projects="FindFilesCom.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExcecCom">
+        <MSBuild Projects="ExcecCom.dproj"/>
+    </Target>
+    <Target Name="ExcecCom:Clean">
+        <MSBuild Projects="ExcecCom.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExcecCom:Make">
+        <MSBuild Projects="ExcecCom.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MainLaunch;FindFilesCom;ExcecCom"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MainLaunch:Clean;FindFilesCom:Clean;ExcecCom:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MainLaunch:Make;FindFilesCom:Make;ExcecCom:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
