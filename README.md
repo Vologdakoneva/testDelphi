@@ -12,3 +12,9 @@
 
  Это каак выглядит окно при запуске программ и завершении (Закрытии)
 
+
+ Если вызвать поиск
+ 
+ ![image](https://github.com/user-attachments/assets/bfce0bcb-ce5d-4aea-b420-89836c432f93)
+
+
