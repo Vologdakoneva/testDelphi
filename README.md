@@ -7,3 +7,8 @@
 команды:
  regsvr32 FindFilesCom.dll
  regsvr32 ExcecCom.dll
+
+ ![image](https://github.com/user-attachments/assets/839a0a77-96be-493a-a845-a63f42617926)
+
+ Это каак выглядит окно при запуске программ и завершении (Закрытии)
+
